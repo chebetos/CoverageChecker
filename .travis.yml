@@ -1,0 +1,25 @@
+## YAML Template.
+language: php
+ 
+php:
+  - 5.3
+  - 5.4
+ 
+script:
+  - phpunit
+#  - php coverage-checker.php clover.xml 75
+#  - a2enmod rewrite
+#  - a2enmod expires
+#  - a2enmod headers
+#  - service apache2 restart
+#  - pear upgrade PEAR
+#  - pear config-set auto_discover 1
+#  - pear channel-discover pear.phpdoc.org
+#  - pear channel-discover pear.phing.info
+#  - pear config-set preferred_state stable
+#  - pear install --alldeps pear.phpqatools.org/phpqatools pear.netpirates.net/phpDox-0.5.0 pear.apigen.org/apigen phing/phing phing/phingdocs pear.phpunit.de/PHPUnit bartlett.laurent-laville.org/PHP_CompatInfo pear/XML_Serializer pear/PEAR_PackageFileManager2 pear/PEAR_PackageFileManager_Plugins bartlett/PHP_CompatInfo 
+## - pear install --alldeps xinc/Xinc
+#  - pear config-set preferred_state alpha
+#  - pear install --alldeps phpdoc/phpDocumentor-alpha pear/VersionControl_SVN pear/VersionControl_Git pear/Services_Amazon_S3 pear/XML_Serializer
+#  - pear config-set preferred_state stable
+## -  xinc-settings set web title "Xinc Server"

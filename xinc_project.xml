@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xinc engine="Sunrise">
+    <project name="CoverageChecker">
+        <configuration>
+            <setting name="loglevel" value="0"/>
+            <setting name="timezone" value="Europe/Madrid"/>
+        </configuration>        
+        <property name="dir" value="${projectdir}/${project.name}" />
+        <schedule interval="240" />
+        <modificationset>
+            <git directory="${git}" update="true" repository="git@github.com:chebetos/CoverageChecker.git" />
+        </modificationset>
+        <builders>
+            <phingbuilder buildfile="${dir}/build.xml" />
+        </builders>
+        <publishers>
+            <onfailure>
+                <email to="chebetos@gmail.com" subject="${project.name} Build failed"
+                       message="Build of project {project.name} failed" />
+            </onfailure>
+            <onsuccess>
+                <email to="chebetos@gmail.com" subject="{project.name} Build success"
+                       message="Build of project {project.name} was successful" />
+            </onsuccess>
+        </publishers>
+    </project>
+</xinc>    
+</root>
